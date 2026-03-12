@@ -16,14 +16,14 @@ public class AddTest {
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("file:///S:/hello-world/src/main/webapp/index.html");
+        driver.get("file://" + System.getProperty("user.dir") + "/src/main/webapp/index.html");
 
         driver.findElement(By.id("num1")).sendKeys("10");
         driver.findElement(By.id("num2")).sendKeys("20");
 
         driver.findElement(By.tagName("button")).click();
 
-        Thread.sleep(20000);
+        Thread.sleep(2000);
 
         String result = driver.findElement(By.id("result")).getAttribute("value");
 
