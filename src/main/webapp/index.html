@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Addition of Two Numbers</title>
+
+<style>
+body{
+    font-family: Arial;
+    text-align: center;
+    margin-top: 100px;
+}
+
+input{
+    padding:10px;
+    margin:10px;
+    font-size:16px;
+}
+
+button{
+    padding:10px 20px;
+    font-size:16px;
+    background-color: blue;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color: darkblue;
+}
+</style>
+
+<script>
+function addNumbers() {
+    var a = document.getElementById("num1").value;
+    var b = document.getElementById("num2").value;
+
+    var sum = Number(a) + Number(b);
+
+    document.getElementById("result").value = sum;
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>Addition of Two Numbers</h2>
+
+First Number:  
+<input type="text" id="num1"><br><br>
+
+Second Number:  
+<input type="text" id="num2"><br><br>
+
+<button onclick="addNumbers()">Add</button><br><br>
+
+Result:  
+<input type="text" id="result" readonly>
+
+</body>
+</html>
